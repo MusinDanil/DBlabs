@@ -18,23 +18,23 @@ DROP TABLE projectloanbridge CASCADE CONSTRAINTS;
 DROP TABLE region CASCADE CONSTRAINTS;
 
 CREATE TABLE country (
-    country_id     NUMBER(7) NOT NULL,
+    country_id     NUMBER(10) NOT NULL,
     country_name   VARCHAR2(128),
-    region_id      NUMBER(7) NOT NULL
+    region_id      NUMBER(10) NOT NULL
 );
 
 ALTER TABLE country ADD CONSTRAINT country_pk PRIMARY KEY ( country_id );
 
 CREATE TABLE countryprojectbridge (
-    country_id   NUMBER(7) NOT NULL,
-    project_id   NUMBER(7) NOT NULL
+    country_id   NUMBER(10) NOT NULL,
+    project_id   NUMBER(10) NOT NULL
 );
 
 ALTER TABLE countryprojectbridge ADD CONSTRAINT countryprojectbridge_pk PRIMARY KEY ( country_id,
                                                                                       project_id );
 
 CREATE TABLE loan (
-    loan_id         NUMBER(7) NOT NULL,
+    loan_id         NUMBER(10) NOT NULL,
     status          VARCHAR2(8),
     amount          INTEGER,
     approval_date   DATE
@@ -43,7 +43,7 @@ CREATE TABLE loan (
 ALTER TABLE loan ADD CONSTRAINT loan_pk PRIMARY KEY ( loan_id );
 
 CREATE TABLE project (
-    project_id     NUMBER(7) NOT NULL,
+    project_id     NUMBER(10) NOT NULL,
     project_name   VARCHAR2(256),
     closing_date   DATE
 );
@@ -51,8 +51,8 @@ CREATE TABLE project (
 ALTER TABLE project ADD CONSTRAINT project_pk PRIMARY KEY ( project_id );
 
 CREATE TABLE projectloanbridge (
-    project_id   NUMBER(7) NOT NULL,
-    loan_id      NUMBER(7) NOT NULL
+    project_id   NUMBER(10) NOT NULL,
+    loan_id      NUMBER(10) NOT NULL
 );
 
 ALTER TABLE projectloanbridge ADD CONSTRAINT projectloanbridge_pk PRIMARY KEY ( project_id,
@@ -60,7 +60,7 @@ ALTER TABLE projectloanbridge ADD CONSTRAINT projectloanbridge_pk PRIMARY KEY ( 
 
 CREATE TABLE region (
     region_name   VARCHAR2(96) NOT NULL,
-    region_id     NUMBER(7) NOT NULL
+    region_id     NUMBER(10) NOT NULL
 );
 
 ALTER TABLE region ADD CONSTRAINT region_pk PRIMARY KEY ( region_id );

@@ -26,9 +26,10 @@ db.execute('DELETE FROM PROJECT')
 db.execute('DELETE FROM LOAN')
 db_conn.commit()
 
+data['totalamt'] = data['totalamt'].str.replace(",","").astype(float)
+data['totalamt'] = data['totalamt'].fillna(0)
 
-
-for index, row in data.head(100).iterrows():
+for index, row in data.head(2500).iterrows():
     region_id = db.execute("SELECT region_id FROM Region where TRIM(region_name) = :region_name", region_name=row['regionname']).fetchall()
     if not region_id:
         region_id = db.execute("SELECT NVL(MAX(region_id)+1,1) FROM Region").fetchall()[0][0]
@@ -42,11 +43,11 @@ for index, row in data.head(100).iterrows():
         db.execute("INSERT INTO COUNTRY (COUNTRY_ID, COUNTRY_NAME, REGION_ID) VALUES (:country_id, :country_name, :region_id)", country_id=country_id, country_name=row['countryname'], region_id=region_id)
     else:
         country_id = country_id[0][0]
-
+    
     project_id = db.execute("SELECT NVL(MAX(project_id)+1,1) FROM Project").fetchall()[0][0]
     loan_id = db.execute("SELECT NVL(MAX(loan_id)+1,1) FROM Loan").fetchall()[0][0]
     db.execute("INSERT INTO project (project_id, project_name) VALUES (:project_id, :project_name)", project_id=project_id, project_name=row['project_name'])
-    db.execute("INSERT INTO loan (loan_id, status, amount, approval_date) VALUES (:loan_id, :status, :amount, :approval_date)", loan_id=loan_id, status=row['status'], amount=int(row['totalamt'].replace(',', '')), approval_date=row['boardapprovaldate'][0:10])
+    db.execute("INSERT INTO loan (loan_id, status, amount, approval_date) VALUES (:loan_id, :status, :amount, :approval_date)", loan_id=loan_id, status=row['status'], amount=int(row['totalamt']), approval_date=row['boardapprovaldate'][0:10])
     db.execute("INSERT INTO countryprojectbridge (country_id, project_id) VALUES (:country_id, :project_id)", country_id=country_id, project_id=project_id)
     db.execute("INSERT INTO projectloanbridge (project_id, loan_id) VALUES (:project_id, :loan_id)", project_id=project_id, loan_id=loan_id)
     db_conn.commit()
