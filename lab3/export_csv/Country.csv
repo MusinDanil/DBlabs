@@ -1,0 +1,62 @@
+COUNTRY_ID,COUNTRY_NAME,REGION_ID
+1,Kingdom of Morocco;Kingdom of Morocco,1
+2,Kingdom of Tonga;Kingdom of Tonga,2
+3,Republic of the Marshall Islands;Republic of the Marshall Islands,2
+4,Federated States of Micronesia;Federated States of Micronesia,2
+5,Samoa;Samoa,2
+6,Republic of Moldova;Republic of Moldova,3
+7,Republic of Armenia;Republic of Armenia,3
+8,Republic of Haiti;Republic of Haiti,4
+9,Central African Republic;Central African Republic,5
+10,People's Republic of China;People's Republic of China,2
+11,Republic of Ghana;Republic of Ghana,5
+12,Republic of Djibouti;Republic of Djibouti,1
+13,Republic of Iraq;Republic of Iraq,1
+14,Islamic Republic of Mauritania;Islamic Republic of Mauritania,5
+15,Republic of Honduras;Republic of Honduras,4
+16,Republic of Rwanda;Republic of Rwanda,5
+17,Burkina Faso;Burkina Faso,5
+18,Republic of Kenya;Republic of Kenya,5
+19,Republic of Madagascar;Republic of Madagascar,5
+20,Mongolia;Mongolia,2
+21,Islamic  Republic of Afghanistan;Islamic  Republic of Afghanistan,6
+22,Republic of Niger;Republic of Niger,5
+23,Republic of Serbia;Republic of Serbia,3
+24,Western Balkans;Western Balkans,3
+25,Republic of Belarus;Republic of Belarus,3
+26,Western Africa;Western Africa,5
+27,Republic of Uganda;Republic of Uganda,5
+28,Republic of El Salvador;Republic of El Salvador,4
+29,Arab Republic of Egypt;Arab Republic of Egypt,1
+30,Democratic Socialist Republic of Sri Lan;Democratic Socialist Republic of Sri Lan,6
+31,Republic of Cote d'Ivoire;Republic of Cote d'Ivoire,5
+32,Sint Maarten;Sint Maarten,4
+33,Kingdom of Cambodia;Kingdom of Cambodia,2
+34,Republic of Ecuador;Republic of Ecuador,4
+35,Republic of India;Republic of India,6
+36,People's Republic of Bangladesh;People's Republic of Bangladesh,6
+37,Co-operative Republic of Guyana;Co-operative Republic of Guyana,4
+38,Republic of Mozambique;Republic of Mozambique,5
+39,Solomon Islands;Solomon Islands,2
+40,United Mexican States;United Mexican States,4
+41,Republic of Liberia;Republic of Liberia,5
+42,Africa;Africa,5
+43,Democratic Republic of Sao Tome and Prin;Democratic Republic of Sao Tome and Prin,5
+44,Republic of Guinea;Republic of Guinea,5
+45,Central Asia;Central Asia,3
+46,Republic of Uzbekistan;Republic of Uzbekistan,3
+47,Republic of Mali;Republic of Mali,5
+48,Republic of Sierra Leone;Republic of Sierra Leone,5
+49,Commonwealth of Dominica;Commonwealth of Dominica,4
+50,Republic of the Philippines;Republic of the Philippines,2
+51,Republic of Malawi;Republic of Malawi,5
+52,Lao People's Democratic Republic;Lao People's Democratic Republic,2
+53,Republic of Colombia;Republic of Colombia,4
+54,Somali Democratic Republic;Somali Democratic Republic,5
+55,Republic of Indonesia;Republic of Indonesia,2
+56,Republic of Tajikistan;Republic of Tajikistan,3
+57,Federative Republic of Brazil;Federative Republic of Brazil,4
+58,Republic of South Sudan;Republic of South Sudan,5
+59,Democratic Republic of the Congo;Democratic Republic of the Congo,5
+60,Republic of Benin;Republic of Benin,5
+61,Gabonese Republic;Gabonese Republic,5
